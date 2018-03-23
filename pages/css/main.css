@@ -1,0 +1,234 @@
+@import url(http://fonts.googleapis.com/css?family=Capriola);
+body {
+    color: white;
+    margin-left : 80px;
+    margin-right: 80px;
+    background: url("../img/fond.png");
+    background-size: contain;
+    box-shadow  : -60px 0px 120px -30px #db0083, 60px 0px 120px -30px #db0083;
+    font-family: Capriola, Helvetica, sans-serif;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+header {
+    text-align: center;
+    color     : #fff;
+}
+
+.img_header {
+    width: 40%;
+}
+
+.article {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+div.texte {
+    text-align: justify;
+}
+
+hr.star-light {
+    border : 0;
+    height: 4px;
+    background-image: linear-gradient(to right, rgba(219, 0, 131, 0.36), rgba(219, 0, 131, 0.75), rgba(219, 0, 131, 0.35));
+}
+
+hr.star-dark {
+    border : 0;
+    height: 4px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.47));
+}
+
+div.visit_counter {
+    width: 72px;
+    margin: 0 auto;
+}
+
+/**
+    Navbar
+ */
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    font-family: Capriola, Helvetica, sans-serif;
+}
+#cssmenu {
+    height: 59px;
+    padding-bottom: 4px;
+    background-color: rgba(0,0,0,0.5);
+}
+#cssmenu.align-right {
+    float: right;
+}
+#cssmenu.align-right ul li {
+    float: right;
+    margin-right: 0;
+    margin-left: 4px;
+}
+#cssmenu.align-right ul li:first-child,
+#cssmenu.align-right ul li:first-child > a {
+    border-bottom-right-radius: 3px;
+}
+
+#cssmenu ul {
+    width: 480px;
+    height: 59px;
+}
+
+#cssmenu ul li {
+    float: left;
+    margin-right: 4px;
+    z-index: 5;
+}
+#cssmenu ul li a {
+    padding: 24px 30px 20px 30px;
+    margin-bottom: 4px;
+    color: #eeeeee;
+    font-size: 15px;
+    text-decoration: none;
+}
+#cssmenu ul li:hover,
+#cssmenu ul li.active {
+    background: #db0083;
+    background: -moz-linear-gradient(top, #900056 0%, #db0083 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #900056), color-stop(100%, #db0083));
+    background: -webkit-linear-gradient(top, #900056 0%, #db0083 100%);
+    background: -o-linear-gradient(top, #900056 0%, #db0083 100%);
+    background: -ms-linear-gradient(top, #900056 0%, #db0083 100%);
+    background: linear-gradient(to bottom, #900056 0%, rgba(219, 0, 131, 0.88) 100%);
+}
+#cssmenu ul li a:hover,
+#cssmenu ul li.active > a {
+    color: #ffffff;
+}
+
+/**
+    Défilement Texte
+ */
+
+.defileParent {
+    display: block;
+    margin: 1em auto;
+    overflow: hidden;
+    position: relative;
+    table-layout: fixed;
+    width: 700px;
+}
+
+.defile {
+    display:block;
+    -webkit-animation:linear marqueelike 20s infinite ;
+    -moz-animation:linear marqueelike 20s infinite ;
+    -o-animation:linear marqueelike 20s infinite ;
+    -ms-animation:linear marqueelike 20s infinite ;
+    animation:linear marqueelike 20s infinite ;
+    margin-left:-100%;
+    padding:0 5px;
+    text-align:left;
+    height:25px;
+}
+
+.defile:after {
+    content:attr(data-text);
+    position:absolute;
+    white-space:nowrap;
+    padding-left:10px;
+}
+
+@-webkit-keyframes marqueelike {
+    0%, 100% {margin-left:0;}
+    99.99% {margin-left:-100%;}
+}
+@-moz-keyframes marqueelike {
+    0%, 100% {margin-left:0;}
+    99.99% {margin-left:-100%;}
+}
+@-o-keyframes marqueelike {
+    0%, 100% {margin-left:0;}
+    99.99% {margin-left:-100%;}
+}
+@-ms-keyframes marqueelike {
+    0%, 100% {margin-left:0;}
+    99.99% {margin-left:-100%;}
+}
+@keyframes marqueelike {
+    0%, 100% {margin-left:0;}
+    99.99% {margin-left:-100%;}
+}
+
+/**
+    Footer
+ */
+
+.apropos {
+    margin-top: -45px;
+    font-weight   : 700;
+    font-size     : 2.5em;
+}
+
+.auteur {
+    text-align: right;
+}
+
+footer {
+    background-color: rgba(0,0,0,0.5);
+    padding: 25px 0;
+}
+
+footer h2 {
+    margin   : 0;
+}
+
+footer.success {
+    color     : #fff;
+    margin-bottom: -20px;
+}
+
+span.align_right {
+    float: right;
+    margin-right: 20px;
+}
+
+p.center {
+    text-align: center;
+}
+
+div.noms {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+p.up {
+    width: 130px;
+    margin: 0 auto;
+}
+
+/**
+    Plugin Youtube
+ */
+
+.videoWrapper {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
